@@ -4,6 +4,11 @@
 <head>
 	<title>Portfolio Website</title>
 	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		window.onload = function () {
+			document.querySelector(".loading-page").style.display = "none";
+		};
+	</script>
 	<style>
 		/* Add any custom styles here */
 		.popup {
@@ -36,6 +41,16 @@
 </head>
 
 <body class="bg-gray-100 font-sans">
+
+	<!-- Loading... -->
+
+	<div class="loading-page fixed h-full w-full flex justify-center items-center bg-gray-200">
+		<img src="/img/logo.svg" alt="Loading animation" class="h-64 w-64 left-0 right-0 top-0 bottom-0">
+	</div>
+
+
+	<!-- HeaderSection -->
+
 	<header class="bg-white shadow-md w-full">
 		<div class="container mx-auto px-6 py-4">
 			<div class="flex items-center justify-between">
