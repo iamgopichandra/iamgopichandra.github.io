@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html class="scroll-smooth hover:scroll-auto">
+<html>
 
 <head>
-	<title>Portfolio Website</title>
-	<script src="https://cdn.tailwindcss.com"></script>
+	<title>Portfolio | Gopi Chandra</title>
+	<link rel="shortcut icon" href="/img/favicon.svg" type="image/x-icon">
+	<script src="/tailwindCSS.js"></script>
 	<script>
 		window.onload = function () {
 			document.querySelector(".loading-page").style.display = "none";
@@ -11,6 +12,10 @@
 	</script>
 	<style>
 		/* Add any custom styles here */
+		html {
+			scroll-behavior: smooth;
+		}
+
 		.popup {
 			position: fixed;
 			top: 0;
@@ -28,7 +33,6 @@
 			transform: translate(-50%, -50%);
 			background: white;
 			padding: 1rem;
-			overflow-y: scroll;
 		}
 
 		.close-btn {
@@ -45,7 +49,7 @@
 	<!-- Loading... -->
 
 	<div class="loading-page fixed h-full w-full flex justify-center items-center bg-gray-200">
-		<img src="/img/logo.svg" alt="Loading animation" class="h-64 w-64 left-0 right-0 top-0 bottom-0">
+		<img src="/logo_gc.svg" alt="Loading animation" class="h-64 w-64 left-0 right-0 top-0 bottom-0 animate-bounce">
 	</div>
 
 
@@ -54,8 +58,10 @@
 	<header class="bg-white shadow-md w-full">
 		<div class="container mx-auto px-6 py-4">
 			<div class="flex items-center justify-between">
-				<!-- <h1 class="text-2xl font-bold text-gray-800">My Portfolio</h1> -->
-				<img src="/img/logo.svg" alt="Logo" class="h-12 w-auto cursor-pointer transition hover:scale-125">
+				<div class="flex items-center cursor-pointer transition hover:scale-105">
+					<img src="/img/logo.svg" alt="Logo" class="h-12 w-auto mr-3">
+					<h1 class="text-2xl font-bold text-gray-800">Portfolio</h1>
+				</div>
 				<nav class="flex items-center">
 					<a href="#home"
 						class="px-3 py-2 font-bold text-gray-800 hover:text-gray-600 transition hover:scale-125">Home</a>
@@ -75,26 +81,31 @@
 	</header>
 	<main class="container mx-auto px-6 py-4">
 
-		<!-- HeroSection -->
+		<!--- HeroSection -->
 
-		<section class="bg-gray-900 shadow-lg py-32 rounded-xl" id="home">
+		<section class="bg-gray-300 py-32 shadow-lg rounded-xl" id="home">
 			<div class="container mx-auto px-4">
 				<div class="flex items-center justify-center flex-wrap">
 					<div class="w-full md:w-1/2 lg:w-2/3 px-4 mb-8">
-						<h2 class="text-3xl font-bold text-white mb-4">Welcome to my website</h2>
-						<p class="text-gray-400 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+						<h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome to my website</h2>
+						<p class="text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
 							at justo eu turpis interdum condimentum. Nullam et erat ornare, elementum ante eu, tempus
 							tellus.
 						</p>
-						<span class="text-gray-400 mb-8 underline italic cursor-wait block">This site under
+						<span class="text-gray-600 mb-8 underline italic cursor-wait block">This site under
 							construct!!!</span>
 						<a href="#"
-							class="px-6 py-3 rounded-full font-bold text-white bg-teal-800 hover:bg-teal-700 focus:outline-none focus:bg-teal-700">Learn
+							class="px-6 py-3 mr-5 rounded-full font-bold text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:bg-slate-700">Learn
 							more
 						</a>
+						<a href="resume_GC.pdf"
+							class="px-6 py-3 inline-block rounded-full font-bold text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:bg-slate-700""
+							download>
+							Download Resume
+						</a>
 					</div>
-					<div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-						<img src="/img/home-right.webp" alt="Hero image" class="w-full rounded-lg shadow-lg">
+					<div class=" w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+							<img src="/img/home-right.webp" alt="Hero image" class="w-full rounded-lg">
 					</div>
 				</div>
 			</div>
@@ -107,7 +118,7 @@
 				<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">About Me</h2>
 				<div class="flex flex-wrap -mx-4">
 					<div class="w-full md:w-1/2 px-4 mb-8">
-						<img src="/img/about-us.webp" alt="About Us" class="rounded-lg shadow-lg">
+						<img src="/img/about-us.webp" alt="About Us" class="rounded-lg">
 					</div>
 					<div class="w-full md:w-1/2 px-4 mb-8">
 						<h3 class="text-2xl font-bold text-gray-800 mb-4">My Story</h3>
@@ -136,7 +147,7 @@
 							<p class="text-gray-600 text-center">Founder</p>
 							<div class="mt-4 flex items-center justify-center">
 								<a href="#"
-									class="px-3 py-2 rounded-md text-sm font-medium text-white bg-teal-800 hover:bg-teal-700 focus:outline-none focus:bg-teal-700 text-center">View
+									class="px-3 py-2 rounded-md text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:bg-slate-700 text-center">View
 									profile</a>
 							</div>
 						</div>
@@ -149,7 +160,7 @@
 							<p class="text-gray-600 text-center">Co-Founder</p>
 							<div class="mt-4 flex items-center justify-center">
 								<a href="#"
-									class="px-3 py-2 rounded-md text-sm font-medium text-white bg-teal-800 hover:bg-teal-700 focus:outline-none focus:bg-teal-700 text-center">View
+									class="px-3 py-2 rounded-md text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:bg-slate-700 text-center">View
 									profile</a>
 							</div>
 						</div>
@@ -162,7 +173,7 @@
 							<p class="text-gray-600 text-center">Marketing Manager</p>
 							<div class="mt-4 flex items-center justify-center">
 								<a href="#"
-									class="px-3 py-2 rounded-md text-sm font-medium text-white bg-teal-800 hover:bg-teal-700 focus:outline-none focus:bg-teal-700 text-center">View
+									class="px-3 py-2 rounded-md text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:bg-slate-700 text-center">View
 									profile</a>
 							</div>
 						</div>
@@ -176,15 +187,16 @@
 		<section class="bg-gray-300 shadow-lg py-12 mt-10 rounded-xl" id="projects">
 			<div class="container mx-auto px-4">
 				<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Recent Projects</h2>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"id="popup-btn">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="popup-btn">
 					<div class="col-span-1 rounded-lg shadow-lg bg-white overflow-hidden cursor-pointer">
 						<img src="/img/project/ecom.jpg" alt="Project 1" class="w-full object-center">
 						<div class="p-6">
 							<h3 class="text-2xl font-bold text-gray-800 mb-4">Project 1</h3>
 							<p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 								Maecenas at justo eu turpis interdum condimentum.</p>
-								<a
-								class="px-6 py-3 font-bold text-white bg-teal-800 rounded-full hover:bg-teal-700 focus:outline-none focus:bg-teal-700">See more</a>
+							<a
+								class="px-6 py-3 font-bold text-white bg-slate-800 rounded-full hover:bg-slate-700 focus:outline-none focus:bg-slate-700">See
+								more</a>
 						</div>
 					</div>
 					<div class="col-span-1 rounded-lg shadow-lg bg-white overflow-hidden cursor-pointer">
@@ -193,8 +205,9 @@
 							<h3 class="text-2xl font-bold text-gray-800 mb-4">Project 2</h3>
 							<p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 								Maecenas at justo eu turpis interdum condimentum.</p>
-								<a
-								class="px-6 py-3 font-bold text-white bg-teal-800 rounded-full hover:bg-teal-700 focus:outline-none focus:bg-teal-700">See more</a>
+							<a
+								class="px-6 py-3 font-bold text-white bg-slate-800 rounded-full hover:bg-slate-700 focus:outline-none focus:bg-slate-700">See
+								more</a>
 						</div>
 					</div>
 					<div class="col-span-1 rounded-lg shadow-lg bg-white overflow-hidden cursor-pointer">
@@ -203,12 +216,13 @@
 							<h3 class="text-2xl font-bold text-gray-800 mb-4">Project 3</h3>
 							<p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 								Maecenas at justo eu turpis interdum condimentum.</p>
-								<a
-								class="px-6 py-3 font-bold text-white bg-teal-800 rounded-full hover:bg-teal-700 focus:outline-none focus:bg-teal-700">See more</a>
+							<a
+								class="px-6 py-3 font-bold text-white bg-slate-800 rounded-full hover:bg-slate-700 focus:outline-none focus:bg-slate-700">See
+								more</a>
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 		</section>
 
@@ -226,7 +240,7 @@
 							<p class="text-gray-700 text-base mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing
 								elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 							<a href="#"
-								class="px-6 py-3 font-bold text-white bg-teal-800 rounded-full hover:bg-teal-700 focus:outline-none focus:bg-teal-700">Read
+								class="px-6 py-3 font-bold text-white bg-slate-800 rounded-full hover:bg-slate-700 focus:outline-none focus:bg-slate-700">Read
 								More</a>
 						</div>
 					</div>
@@ -238,7 +252,7 @@
 							<p class="text-gray-700 text-base mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing
 								elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 							<a href="#"
-								class="px-6 py-3 font-bold text-white bg-teal-800 rounded-full hover:bg-teal-700 focus:outline-none focus:bg-teal-700">Read
+								class="px-6 py-3 font-bold text-white bg-slate-800 rounded-full hover:bg-slate-700 focus:outline-none focus:bg-slate-700">Read
 								More</a>
 						</div>
 					</div>
@@ -250,7 +264,7 @@
 							<p class="text-gray-700 text-base mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing
 								elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 							<a href="#"
-								class="px-6 py-3 font-bold text-white bg-teal-800 rounded-full hover:bg-teal-700 focus:outline-none focus:bg-teal-700">Read
+								class="px-6 py-3 font-bold text-white bg-slate-800 rounded-full hover:bg-slate-700 focus:outline-none focus:bg-slate-700">Read
 								More</a>
 						</div>
 					</div>
@@ -258,48 +272,46 @@
 			</div>
 		</section>
 
-
-
 		<!-- ContactSection -->
 
-		<section class="bg-gray-900 shadow-lg py-12 mt-10 rounded-xl" id="contact">
+		<section class="bg-gray-300 shadow-lg py-12 mt-10 rounded-xl" id="contact">
 			<div class="container mx-auto px-4">
-				<h2 class="text-3xl font-bold text-center text-white mb-8">Get in touch</h2>
+				<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Get in touch</h2>
 				<div class="flex flex-wrap -mx-4">
 					<div class="w-full md:w-1/2 px-4 mb-8">
-						<h3 class="text-2xl font-bold text-white mb-4">Contact me</h3>
-						<p class="text-gray-400 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+						<h3 class="text-2xl font-bold text-gray-800 mb-4">Contact me</h3>
+						<p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
 							at justo eu turpis interdum condimentum.</p>
-						<p class="text-gray-400 mb-4"><strong>Email:</strong> gc24ck@gmail.com</p>
-						<p class="text-gray-400 mb-4"><strong>WhatsApp:</strong> (+91) 843-322-6848</p>
-						<p class="text-gray-400 mb-4"><strong>Telegram:</strong> (+91) 843-322-6848</p>
+						<p class="text-gray-600 mb-4"><strong>Email:</strong> gc24ck@gmail.com</p>
+						<p class="text-gray-600 mb-4"><strong>WhatsApp:</strong> (+91) 843-322-6848</p>
+						<p class="text-gray-600 mb-4"><strong>Telegram:</strong> (+91) 843-322-6848</p>
 					</div>
 					<div class="w-full md:w-1/2 px-4 mb-8">
-						<h3 class="text-2xl font-bold text-white mb-4">Send me a message</h3>
+						<h3 class="text-2xl font-bold text-gray-800 mb-4">Send me a message</h3>
 						<form>
 							<div class="mb-4">
-								<label class="block text-gray-400 font-bold mb-2" for="name">Name</label>
+								<label class="block text-gray-600 font-bold mb-2" for="name">Name</label>
 								<input
 									class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 									id="name" type="text" placeholder="Jane Smith" required />
 							</div>
 							<div class="mb-4">
-								<label class="block text-gray-400 font-bold mb-2" for="email">Email</label>
+								<label class="block text-gray-600 font-bold mb-2" for="email">Email</label>
 								<input
 									class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 									id="email" type="email" placeholder="username@gmail.com" required>
 							</div>
 							<div class="mb-4">
-								<label class="block text-gray-400 font-bold mb-2" for="message">Message</label>
+								<label class="block text-gray-600 font-bold mb-2" for="message">Message</label>
 								<textarea
 									class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-									id="message" rows="6"
+									id="message" rows="5"
 									placeholder="Hello, I'm interested in your services. Can you please provide more information?"
 									required></textarea>
 							</div>
 							<div class="mb-4">
 								<button
-									class="px-6 py-3 rounded-full font-bold text-white bg-teal-800 hover:bg-teal-700 focus:outline-none focus:bg-teal-700"
+									class="px-6 py-3 rounded-full font-bold text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:bg-slate-700"
 									type="submit">Send message</button>
 							</div>
 						</form>
@@ -321,112 +333,159 @@
 				</svg>
 			</button>
 			<hr class="my-5">
-			<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Project Title</h2>
-			<div class="container mx-auto px-4">
-				<div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-4">
-					<div class="w-full col-span-1 px-3 mb-6">
-						<img src="/img/project/ecom.jpg" alt="Project image" class="w-full rounded-lg shadow-md">
-					</div>
-					<div class="w-full col-span-1 px-3 mb-6 overscroll-contain">
-						<h3 class="text-2xl font-bold text-gray-800 mb-3">Project Description</h3>
-						<p class="text-gray-700 text-base mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-							sed
-							do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<h3 class="text-2xl font-bold text-gray-800 mb-3">Technologies Used</h3>
-						<ul class="text-gray-700 text-base mb-4">
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>JavaScript</li>
-						</ul>
-						<!-- <a
-							class="px-6 py-3 font-bold text-white bg-teal-800 rounded-full hover:bg-teal-700 focus:outline-none focus:bg-teal-700 cursor-not-allowed">View
+			<div class="overflow-y-scroll h-4/5 w-full">
+				<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Project Title</h2>
+				<div class="container mx-auto px-4">
+					<div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-4">
+						<div class="w-full col-span-1 px-3 mb-6">
+							<img src="/img/project/ecom.jpg" alt="Project image" class="w-full rounded-lg shadow-md">
+						</div>
+						<div class="w-full col-span-1 px-3 mb-6 overscroll-contain">
+							<h3 class="text-2xl font-bold text-gray-800 mb-3">Project Description</h3>
+							<p class="text-gray-700 text-base mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing
+								elit,
+								sed
+								do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<h3 class="text-2xl font-bold text-gray-800 mb-3">Technologies Used</h3>
+							<ul class="text-gray-700 text-base mb-4">
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>JavaScript</li>
+							</ul>
+							<!-- <a
+							class="px-6 py-3 font-bold text-white bg-slate-800 rounded-full hover:bg-slate-700 focus:outline-none focus:bg-slate-700 cursor-not-allowed">View
 							Project</a> -->
+						</div>
 					</div>
 				</div>
-			</div>
-			<hr class="my-5">
-			<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Project Title</h2>
-			<div class="container mx-auto px-4">
-				<div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-4">
-					<div class="w-full col-span-1 px-3 mb-6">
-						<img src="/img/project/port.jpg" alt="Project image" class="w-full rounded-lg shadow-md">
-					</div>
-					<div class="w-full col-span-1 px-3 mb-6 overscroll-contain">
-						<h3 class="text-2xl font-bold text-gray-800 mb-3">Project Description</h3>
-						<p class="text-gray-700 text-base mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-							sed
-							do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<h3 class="text-2xl font-bold text-gray-800 mb-3">Technologies Used</h3>
-						<ul class="text-gray-700 text-base mb-4">
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>JavaScript</li>
-						</ul>
-						<!-- <a
-							class="px-6 py-3 font-bold text-white bg-teal-800 rounded-full hover:bg-teal-700 focus:outline-none focus:bg-teal-700 cursor-not-allowed">View
+				<hr class="my-5">
+				<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Project Title</h2>
+				<div class="container mx-auto px-4">
+					<div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-4">
+						<div class="w-full col-span-1 px-3 mb-6">
+							<img src="/img/project/port.jpg" alt="Project image" class="w-full rounded-lg shadow-md">
+						</div>
+						<div class="w-full col-span-1 px-3 mb-6 overscroll-contain">
+							<h3 class="text-2xl font-bold text-gray-800 mb-3">Project Description</h3>
+							<p class="text-gray-700 text-base mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing
+								elit,
+								sed
+								do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<h3 class="text-2xl font-bold text-gray-800 mb-3">Technologies Used</h3>
+							<ul class="text-gray-700 text-base mb-4">
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>JavaScript</li>
+							</ul>
+							<!-- <a
+							class="px-6 py-3 font-bold text-white bg-slate-800 rounded-full hover:bg-slate-700 focus:outline-none focus:bg-slate-700 cursor-not-allowed">View
 							Project</a> -->
+						</div>
 					</div>
 				</div>
-			</div>
-			<hr class="my-5">
-			<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Project Title</h2>
-			<div class="container mx-auto px-4">
-				<div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-4">
-					<div class="w-full col-span-1 px-3 mb-6">
-						<img src="/img/project/clweb.jpg" alt="Project image" class="w-full rounded-lg shadow-md">
-					</div>
-					<div class="w-full col-span-1 px-3 mb-6 overscroll-contain">
-						<h3 class="text-2xl font-bold text-gray-800 mb-3">Project Description</h3>
-						<p class="text-gray-700 text-base mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-							sed
-							do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<h3 class="text-2xl font-bold text-gray-800 mb-3">Technologies Used</h3>
-						<ul class="text-gray-700 text-base mb-4">
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>JavaScript</li>
-						</ul>
-						<!-- <a
-							class="px-6 py-3 font-bold text-white bg-teal-800 rounded-full hover:bg-teal-700 focus:outline-none focus:bg-teal-700 cursor-not-allowed">View
+				<hr class="my-5">
+				<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Project Title</h2>
+				<div class="container mx-auto px-4">
+					<div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-4">
+						<div class="w-full col-span-1 px-3 mb-6">
+							<img src="/img/project/clweb.jpg" alt="Project image" class="w-full rounded-lg shadow-md">
+						</div>
+						<div class="w-full col-span-1 px-3 mb-6 overscroll-contain">
+							<h3 class="text-2xl font-bold text-gray-800 mb-3">Project Description</h3>
+							<p class="text-gray-700 text-base mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing
+								elit,
+								sed
+								do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<h3 class="text-2xl font-bold text-gray-800 mb-3">Technologies Used</h3>
+							<ul class="text-gray-700 text-base mb-4">
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>JavaScript</li>
+							</ul>
+							<!-- <a
+							class="px-6 py-3 font-bold text-white bg-slate-800 rounded-full hover:bg-slate-700 focus:outline-none focus:bg-slate-700 cursor-not-allowed">View
 							Project</a> -->
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-
 	<!-- ScrollUpButton -->
+
 	<div class="fixed bottom-5 right-5 z-40">
 		<button
-			class="js-top-button px-3 py-3 rounded-full font-bold text-white bg-teal-800 hover:bg-teal-700 focus:outline-none focus:bg-teal-700">
-			<svg class="h-6 w-6 fill-current text-white" viewBox="0 0 24 24">
+			class="js-top-button px-3 py-3 rounded-full font-bold text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:bg-slate-700">
+			<svg class="h-6 w-6 fill-current text-white animate-bounce" viewBox="0 0 24 24">
 				<path d="M12 0l8 9h-6v15h-4v-15h-6z" />
 			</svg>
 		</button>
 	</div>
+
+	<!-- Footer Section -->
+
 	<footer class="bg-white shadow-md mt-5">
 		<div class="container mx-auto px-6 py-4">
 			<div class="flex items-center justify-between">
-				<p class="text-gray-700 font-bold">&#169; Copyright 2020 |
-					<a href="https://github.com/iamgopichandra" class="inline text-blue-700 hover:text-blue-500">
-						Gopi Chandra
-					</a>
-				</p>
 				<div class="flex items-center">
-					<a href="https://github.com/iamgopichandra"
+					<img src="/img/logo.svg" alt="GC" class="h-10 w-10 mr-3 cursor-pointer transition hover:scale-110">
+					<p class="text-gray-700 font-bold">
+						<a href="https://github.com/its-gc" class="inline text-blue-700 hover:text-blue-500">
+							Gopi Chandra
+						</a>
+						| &#169; Copyright 2023
+					</p>
+				</div>
+				<div class="flex items-center">
+					<!-- <a href="https://github.com/its-gc"
 						class="px-3 py-2 font-bold text-gray-800 hover:text-gray-600 text-3xl"><ion-icon
 							name="logo-github"></ion-icon></a>
-					<a href="https://www.facebook.com/chandra24.er"
+					<a href="https://www.facebook.com/"
 						class="px-3 py-2 font-bold text-gray-800 hover:text-gray-600 text-3xl"><ion-icon
 							name="logo-facebook"></ion-icon></a>
-					<a href="https://www.instagram.com/gopichandra.01/"
+					<a href="https://www.instagram.com/_gopichandra/"
 						class="px-3 py-2 font-bold text-gray-800 hover:text-gray-600 text-3xl"><ion-icon
-							name="logo-instagram"></ion-icon></a>
+							name="logo-instagram"></ion-icon></a> -->
+					<a href="" class="text-gray-800 transition hover:scale-125">
+						<svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+							class="w-5 h-5" viewBox="0 0 24 24">
+							<path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+						</svg>
+					</a>
+					<a href="" class="ml-3 text-gray-800 transition hover:scale-125">
+						<svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+							class="w-5 h-5" viewBox="0 0 24 24">
+							<path
+								d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+							</path>
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/_gopichandra/" class="ml-3 text-gray-800 transition hover:scale-125">
+						<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+							stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+							<rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+							<path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+						</svg>
+					</a>
+					<a href="" class="ml-3 text-gray-800 transition hover:scale-125">
+						<svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+							stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+							<path stroke="none"
+								d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+							</path>
+							<circle cx="4" cy="4" r="2" stroke="none"></circle>
+						</svg>
+					</a>
 				</div>
 			</div>
 		</div>
 	</footer>
+
+	<!-- Script Section -->
+
+	<!-- Icon Script CDN -->
+
 	<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 	<script>
 		const topButton = document.querySelector('.js-top-button');
@@ -438,7 +497,7 @@
 			});
 		});
 
-		// JavaScript
+		// Pop over JavaScript
 		const popupBtn = document.getElementById('popup-btn');
 		const popup = document.getElementById('popup');
 		const closeBtn = document.getElementById('close-btn');
